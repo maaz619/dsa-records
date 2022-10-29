@@ -45,16 +45,19 @@ void display(int size,STACK *S){
 int main(){
 	int n=0,i=0;
 	STACK *S=create(5);
-	while(n<5){
-		push(n,S);
-		n++;
-	}
+	push(65,S);
+    push(34,S);
+    push(98,S);
+    push(12,S);
+    push(45,S);
 	printf("\n");
 	display(S->size,S);
+    printf("%d",S->top);
 	printf("\n");
 	while(i<5){
                 printf("popped %d\n",pop(S));
                 i++;
         }
 	display(S->size,S);
+    printf("%d",S->top);
 }
