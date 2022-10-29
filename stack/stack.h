@@ -34,6 +34,10 @@ int pop(STACK *S){
     printf("stack emptied!!");
     return S->top;
   }
+  if( S != NULL ) { 
+    free( S->arr ); 
+    free( S ); 
+  } 
   return S->arr[S->top--];
 }
 void display(int size,STACK *S){
